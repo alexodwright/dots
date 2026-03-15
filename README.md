@@ -31,11 +31,11 @@ By default, the installation script will only install the following dotfiles, as
 - `oh-my-posh`
 - `scripts`
 - `zshrc`
-- `tmux`
 
 These packages are also recommended for installation, to ensure proper workings across the system:
 
 - `ripgrep`
+- `tmux`
 - `yazi`
 - `eza`
 - `npm`
