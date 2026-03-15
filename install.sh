@@ -14,6 +14,7 @@ extras=(
 	tmux
 	yazi
 	eza
+	npm
 	)
 
 # Package checks
