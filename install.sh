@@ -9,6 +9,11 @@ packages=(
 	zshrc
 	)
 
+extras=(
+	ripgrep
+	tmux
+	)
+
 # Package checks
 if [[ ! -x $(command -v stow) ]]; then
 	echo "Stow must be installed before this script can be run"
@@ -49,7 +54,7 @@ if [[ ! -x $(command -v fzf) ]]; then
 fi
 
 # Install zed
-if [[ ! -x $(command -v zeditor) ]]; then
+if [[ ! -x $(command -v zed) ]]; then
 	curl -f https://zed.dev/install.sh | sh
 fi
 
@@ -59,8 +64,8 @@ for app in "${packages[@]}"; do
 done
 
 # Finally check for missing packages
-for $app in "$packages[@]"; do
-	if [[ -x ! $(command -v "$app") ]]; then
+for app in "${extras[@]}"; do
+	if ! command -v ${app}; then
 		echo "Still have to install $app"
 	fi
 done
