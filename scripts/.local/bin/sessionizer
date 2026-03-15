@@ -1,0 +1,31 @@
+#!/bin/bash
+root_dirs=(
+	~/Documents
+	~/Projects
+)
+
+selected=$(find "${root_dirs[@]}" -mindepth 1 -type d \
+    -not -path "*/.git/*" \
+    -not -path "*/node_modules/*" \
+    -not -path "*/.venv/*" \
+    -not -path "*/__pycache__/*" \
+    -not -path "*/.cache/*" \
+    -not -path "*/dist/*" \
+    -not -path "*/build/*" \
+    2>/dev/null | fzf)
+
+if [[ -z $selected ]]; then
+    exit 0
+fi
+
+session_name=$(basename "$selected" | tr . _)
+
+if ! tmux has-session -t "$session_name" 2>/dev/null; then
+    tmux new-session -ds "$session_name" -c "$selected"
+fi
+
+if [[ -z $TMUX ]]; then
+    tmux attach-session -t "$session_name"
+else
+    tmux switch-client -t "$session_name"
+fi

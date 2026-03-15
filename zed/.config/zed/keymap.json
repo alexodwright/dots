@@ -1,0 +1,26 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "(Editor && vim_mode == normal) || ProjectPanel || EmptyPane",
+    "bindings": {
+      "space f f": "file_finder::Toggle",
+    },
+  },
+  {
+    "bindings": {
+      "space g f": "workspace::NewSearch",
+    },
+  },
+  {
+    "context": "(Editor && vim_mode == normal) || ProjectPanel || EmptyPane",
+    "bindings": {
+      "space e": "workspace::ToggleRightDock",
+    },
+  },
+]
