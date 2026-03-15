@@ -166,3 +166,4 @@ alias bat="batcat"
 alias py="python3"
 bindkey -s '^o' 'sessionizer
 '
+export PATH="$HOME/.npm-global/bin:$PATH"
