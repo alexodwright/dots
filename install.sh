@@ -12,6 +12,8 @@ packages=(
 extras=(
 	ripgrep
 	tmux
+	yazi
+	eza
 	)
 
 # Package checks
