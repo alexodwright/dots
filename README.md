@@ -47,3 +47,8 @@ The following software is also installed, if not already. These are platform agn
 - `fzf`
 - `zoxide`
 - `oh-my-posh`
+
+These are specific to Hyprland and are not included in the install script:
+
+- `hypr`
+- `waybar`
