@@ -162,8 +162,9 @@ function y() {
 	rm -f -- "$tmp"
 }
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
-alias bat="batcat"
 alias py="python3"
 bindkey -s '^o' 'sessionizer
 '
 export PATH="$HOME/.npm-global/bin:$PATH"
+alias man="tldr"
+export BAT_THEME="tokyonight_night"
