@@ -12,8 +12,4 @@ map("n", "<c-l>", "<cmd>wincmd l<CR>")
 map("n", "<leader>bb", "<cmd>BufferPick<CR>")
 map("n", "<leader>bc", "<cmd>BufferClose<CR>")
 map("n", "<leader>ba", "<cmd>BufferCloseAllButCurrent<CR>")
-map("n", "<leader>w", "<cmd>w<CR>")
-map("n", "<leader>q", "<cmd>q<CR>")
 map('n', '<leader>d', vim.diagnostic.open_float, { noremap=true, silent=true })
-
-
