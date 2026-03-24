@@ -167,3 +167,6 @@ bindkey -s '^o' 'sessionizer'
 export PATH="$HOME/.npm-global/bin:$PATH"
 alias man="tldr"
 export BAT_THEME="tokyonight_night"
+
+alias gs='git status'
+alias gd='git diff'
