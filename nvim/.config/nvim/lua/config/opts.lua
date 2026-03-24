@@ -8,7 +8,6 @@ o.shiftwidth = 4
 o.expandtab = true
 o.smartindent = true
 
-
 vim.diagnostic.config({
   virtual_text = {
     prefix = "●",  -- or "▲", "■", etc.
