@@ -11,18 +11,18 @@
   "disable_ai": true,
   "autosave": {
     "after_delay": {
-      "milliseconds": 1000
-    }
+      "milliseconds": 1000,
+    },
   },
-  "ui_font_family": "SpaceMono Nerd Font",
-  "buffer_font_family": "SpaceMono Nerd Font",
+  "ui_font_family": "JetBrainsMono Nerd Font Mono",
+  "buffer_font_family": "JetBrainsMono Nerd Font Mono",
   "icon_theme": "Material Icon Theme",
   "telemetry": {
     "diagnostics": false,
-    "metrics": false
+    "metrics": false,
   },
   "session": {
-    "trust_all_worktrees": true
+    "trust_all_worktrees": true,
   },
   "vim_mode": true,
   "ui_font_size": 16,
@@ -32,12 +32,12 @@
     "show_user_menu": false,
     "show_project_items": false,
     "show_menus": false,
-    "show_branch_name": false
+    "show_branch_name": false,
   },
   "toolbar": {
-    "quick_actions": false
+    "quick_actions": false,
   },
   "project_panel": {
-    "dock": "right"
-  }
+    "dock": "right",
+  },
 }

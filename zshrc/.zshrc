@@ -163,10 +163,11 @@ function y() {
 }
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 alias py="python3"
-bindkey -s '^o' 'sessionizer'
+bindkey -s '^o' 'sessionizer\n'
 export PATH="$HOME/.npm-global/bin:$PATH"
 alias man="tldr"
 export BAT_THEME="tokyonight_night"
 
 alias gs='git status'
 alias gd='git diff'
+export PATH="$HOME/.local/bin:$PATH"

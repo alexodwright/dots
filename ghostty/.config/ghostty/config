@@ -49,7 +49,7 @@
 # resize-overlay-duration = 4s 200ms
 font-family = JetBrainsMono Nerd Font
 theme = TokyoNight
-font-size = 14
+font-size = 16
 cursor-style = block
 cursor-style-blink = false
 shell-integration-features = no-cursor
@@ -57,3 +57,5 @@ window-padding-x = 10
 window-padding-y = 10
 background-opacity = 1
 background-blur-radius = 20
+macos-option-as-alt = true
+keybind = global:alt+t=toggle_quick_terminal
