@@ -23,7 +23,8 @@ return {
 	  "pyright",
 	  "stylua",
 	  "eslint",
-	  "bashls"
+	  "bashls",
+      "zls",
         },
         handlers = {
           function(server)

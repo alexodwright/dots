@@ -18,28 +18,12 @@ alias mz='function _mz() { mkdir -p "$1" && z "$1"; }; _mz' # make dir and z to 
 alias py='python'
 alias mkdir='mkdir -p'
 alias srczsh='source ~/.zshrc'
-alias open='xdg-open'
-alias code='zed'
 
 # func
 function _ta() {
 	tmux new-session -As $1
 }
 alias ta="_ta"
-
-function _gitAddCommitPush() {
-	if [ $# -ne 3 ]; then
-	    echo "Usage: $0 <commit message> <remote> <branch>"
-	    exit 1
-	fi
-	message=$1
-	remote=$2
-	branch=$3
-
-	git add . && git commit -m "$message" && git push $remote $branch
-}
-
-alias gacp="_gitAddCommitPush"
 
 # bluetooth nonsense
 airpods='18:3F:70:D6:0F:20'
