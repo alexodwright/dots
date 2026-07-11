@@ -170,3 +170,11 @@ gaf() {
 }
 
 bindkey -s '^a' 'gaf\r'
+
+gdf() {
+    git diff $(git diff --name-only |\
+    fzf --reverse --preview 'git diff --color=always {1}' |\
+    awk '{print $1}')
+}
+
+bindkey -s '^u' 'gdf\r'
