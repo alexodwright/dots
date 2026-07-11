@@ -155,3 +155,18 @@ export BAT_THEME="tokyonight_night"
 alias gs='git status'
 alias gd='git diff'
 export PATH="$HOME/.local/bin:$PATH"
+
+gdc() {
+    git diff $(git log --oneline |\
+    fzf --reverse --preview 'git show --color=always {1}' |\
+    awk '{print $1}')
+}
+bindkey -s '^g' 'gdc\r'
+
+gaf() {
+    git add $(git status --porcelain |\
+    fzf -m --reverse --preview 'git diff --color=always {2}' |\
+    awk '{print $2}')
+}
+
+bindkey -s '^a' 'gaf\r'
