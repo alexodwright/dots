@@ -2,6 +2,7 @@
 root_dirs=(
 	~/Documents
 	~/Projects
+    ~/College
 )
 
 selected=$(find "${root_dirs[@]}" -mindepth 1 -type d \

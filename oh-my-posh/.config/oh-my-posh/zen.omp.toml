@@ -29,7 +29,7 @@ final_space = true
       style = 'full'
 
   [[blocks.segments]]
-    template = ' {{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }} <cyan>{{ if gt .Behind 0 }}⇣{{ end }}{{ if gt .Ahead 0 }}⇡{{ end }}</>'
+    template = ' git:({{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }})*{{ end }} <cyan>{{ if gt .Behind 0 }}⇣{{ end }}{{ if gt .Ahead 0 }}⇡{{ end }}</>'
     foreground = 'p:grey'
     background = 'transparent'
     type = 'git'
@@ -40,6 +40,23 @@ final_space = true
       cache_duration = 'none'
       commit_icon = '@'
       fetch_status = true
+
+[[blocks]]
+  type = "prompt"
+  alignment = "right"
+
+  [[blocks.segments]]
+    template = 'env:[{{ .Venv }}]'
+    foreground = 'green'
+    background = 'transparent'
+    type = 'python'
+    style = 'plain'
+
+    [blocks.segments.properties]
+      cache_duration = 'none'
+      display_mode = 'environment'
+      fetch_version = false
+      fetch_virtual_env = true
 
 [[blocks]]
   type = 'rprompt'

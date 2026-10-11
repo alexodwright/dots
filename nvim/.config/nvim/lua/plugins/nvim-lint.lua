@@ -2,8 +2,8 @@ return {
   "mfussenegger/nvim-lint",
   config = function()
     require("lint").linters_by_ft = {
-      markdown = { "markdownlint" },
-      python = { "pyright" },
+      -- markdown = { "markdownlint" },
+      python = { "ruff" },
       javascript = { "eslint" },
       typescript = { "eslint" },
     }

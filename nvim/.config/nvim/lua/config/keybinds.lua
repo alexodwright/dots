@@ -14,3 +14,5 @@ map("n", "<leader>bc", "<cmd>BufferClose<CR>")
 map("n", "<leader>ba", "<cmd>BufferCloseAllButCurrent<CR>")
 map('n', '<leader>d', vim.diagnostic.open_float, { noremap=true, silent=true })
 map('n', '<leader>gd', vim.lsp.buf.definition, { noremap = true, silent = true })
+map('n', '<Esc>', '<cmd>nohlsearch<CR>', { silent = true })
+

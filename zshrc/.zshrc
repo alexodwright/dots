@@ -20,10 +20,13 @@ alias mkdir='mkdir -p'
 alias srczsh='source ~/.zshrc'
 
 # func
-function _ta() {
-	tmux new-session -As $1
+function ta() {
+    if [[ -z $1 ]]; then
+        tmux a
+    else
+        tmux new-session -As "$1"
+    fi
 }
-alias ta="_ta"
 
 # bluetooth nonsense
 airpods='18:3F:70:D6:0F:20'
@@ -178,3 +181,18 @@ gdf() {
 }
 
 bindkey -s '^u' 'gdf\r'
+export HOMEBREW_NO_ENV_HINTS=1
+
+# start tmux if not already started
+if [[ -z "$TMUX" ]]; then
+    tmux
+fi
+
+function tmux_kill_sessions()
+{
+    tmux ls | fzf --reverse -m | awk '{print $1}' | rg '^([^:]+):' | xargs -I {} tmux kill-session -t {}
+}
+
+bindkey -s '^q' 'tmux_kill_sessions\r'
+
+stty -ixon

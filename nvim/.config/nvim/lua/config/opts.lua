@@ -1,5 +1,5 @@
 local o = vim.opt
-o.guicursor = ""
+-- o.guicursor = ""
 o.number = true
 o.spelllang = "en_gb"
 o.spelloptions:append("camel")
